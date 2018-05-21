@@ -1,0 +1,3 @@
+[submodule "astromatic-sextractor"]
+	path = astromatic-sextractor
+	url = ssh://aur@aur.archlinux.org/astromatic-sextractor.git
