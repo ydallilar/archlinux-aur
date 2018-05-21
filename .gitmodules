@@ -1,3 +1,27 @@
 [submodule "astromatic-sextractor"]
 	path = astromatic-sextractor
 	url = ssh://aur@aur.archlinux.org/astromatic-sextractor.git
+[submodule "astromatic-psfex"]
+	path = astromatic-psfex
+	url = ssh://aur@aur.archlinux.org/astromatic-psfex.git
+[submodule "astromatic-swarp"]
+	path = astromatic-swarp
+	url = ssh://aur@aur.archlinux.org/astromatic-swarp.git
+[submodule "astromatic-scamp"]
+	path = astromatic-scamp
+	url = ssh://aur@aur.archlinux.org/astromatic-scamp.git
+[submodule "cdsclient"]
+	path = cdsclient
+	url = ssh://aur@aur.archlinux.org/cdsclient.git
+[submodule "jskycalc"]
+	path = jskycalc
+	url = ssh://aur@aur.archlinux.org/jskycalc.git
+[submodule "heasoft"]
+	path = heasoft
+	url = ssh://aur@aur.archlinux.org/heasoft.git
+[submodule "astroimagej"]
+	path = astroimagej
+	url = ssh://aur@aur.archlinux.org/astroimagej.git
+[submodule "pyakm"]
+	path = pyakm
+	url = ssh://aur@aur.archlinux.org/pyakm.git
