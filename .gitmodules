@@ -25,3 +25,6 @@
 [submodule "pyakm"]
 	path = pyakm
 	url = ssh://aur@aur.archlinux.org/pyakm.git
+[submodule "slack-term"]
+	path = slack-term
+	url = ssh://aur@aur.archlinux.org/slack-term.git
