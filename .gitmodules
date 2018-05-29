@@ -28,3 +28,6 @@
 [submodule "slack-term"]
 	path = slack-term
 	url = ssh://aur@aur.archlinux.org/slack-term.git
+[submodule "slack-term-bin"]
+	path = slack-term-bin
+	url = ssh://aur@aur.archlinux.org/slack-term-bin.git
