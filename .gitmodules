@@ -34,3 +34,6 @@
 [submodule "ds9"]
 	path = ds9
 	url = ssh://aur@aur.archlinux.org/ds9.git
+[submodule "isis"]
+	path = isis
+	url = ssh://aur@aur.archlinux.org/isis.git
