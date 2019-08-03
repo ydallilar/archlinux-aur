@@ -37,3 +37,10 @@
 [submodule "isis"]
 	path = isis
 	url = ssh://aur@aur.archlinux.org/isis.git
+[submodule "ms-office-online"]
+	path = ms-office-online
+	url = ssh://aur@aur.archlinux.org/ms-office-online.git
+[submodule "jade-application-kit"]
+	path = jade-application-kit
+	url = ssh://aur@aur.archlinux.org/jade-application-kit.git
+
