@@ -1,0 +1,60 @@
+pkgbase=pandoc-bin
+pkgname=('pandoc-bin' 'pandoc-citeproc-bin' 'pandoc-data')
+pkgver=2.7.3
+pkgrel=1
+pkgdesc="Pandoc - executable only, without 750MB Haskell depends/makedepends"
+url="http://pandoc.org"
+license=("GPL")
+arch=('x86_64')
+optdepends=(
+    'texlive-core: for pdf output'
+)
+
+source=(
+    "https://github.com/jgm/pandoc/releases/download/${pkgver}/pandoc-${pkgver}-linux.tar.gz"
+    "https://github.com/jgm/pandoc/archive/${pkgver}.tar.gz"
+)
+sha256sums=('eb775fd42ec50329004d00f0c9b13076e707cdd44745517c8ce2581fb8abdb75'
+            'e21eabd337a648bf3ab218b46745d23d18666296133bea441c3cba40e3bac0e7')
+
+package_pandoc-bin() {
+
+	conflicts=("pandoc")
+	provides=("pandoc")
+	replaces=('pandoc-static' 'pandoc-lite')
+	depends=('cmark')
+
+    cd "${srcdir}/pandoc-${pkgver}"
+
+	install -Dvm755 bin/pandoc ${pkgdir}/usr/bin/pandoc
+	install -Dvm644 share/man/man1/pandoc.1.gz ${pkgdir}/usr/share/man/man1/pandoc.1.gz
+	install -Dvm644 COPYRIGHT ${pkgdir}/usr/share/pandoc/COPYRIGHT
+	install -Dvm644 MANUAL.txt ${pkgdir}/usr/share/pandoc/MANUAL.txt
+
+}
+
+package_pandoc-citeproc-bin() {
+
+	conflicts=("pandoc-citeproc")
+	provides=("pandoc-citeproc")
+	depends=('pandoc-bin')
+
+    cd "${srcdir}/pandoc-${pkgver}"
+
+	install -Dvm755 bin/pandoc-citeproc ${pkgdir}/usr/bin/pandoc-citeproc
+	install -Dvm644 share/man/man1/pandoc-citeproc.1.gz ${pkgdir}/usr/share/man/man1/pandoc-citeproc.1.gz
+
+}
+
+package_pandoc-data() {
+
+	depends=('pandoc-data')
+
+    cd "${srcdir}/pandoc-${pkgver}"
+    mkdir -p "${pkgdir}/usr/share/pandoc"
+    cp -R data "${pkgdir}/usr/share/pandoc/"
+    rm -R ${pkgdir}/usr/share/pandoc/data/templates/{.github,README.markdown}
+
+}
+
+

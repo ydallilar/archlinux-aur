@@ -1,0 +1,28 @@
+pkgbase = pandoc-bin
+	pkgdesc = Pandoc - executable only, without 750MB Haskell depends/makedepends
+	pkgver = 2.7.3
+	pkgrel = 1
+	url = http://pandoc.org
+	arch = x86_64
+	license = GPL
+	optdepends = texlive-core: for pdf output
+	source = https://github.com/jgm/pandoc/releases/download/2.7.3/pandoc-2.7.3-linux.tar.gz
+	source = https://github.com/jgm/pandoc/archive/2.7.3.tar.gz
+	sha256sums = eb775fd42ec50329004d00f0c9b13076e707cdd44745517c8ce2581fb8abdb75
+	sha256sums = e21eabd337a648bf3ab218b46745d23d18666296133bea441c3cba40e3bac0e7
+
+pkgname = pandoc-bin
+	depends = cmark
+	provides = pandoc
+	conflicts = pandoc
+	replaces = pandoc-static
+	replaces = pandoc-lite
+
+pkgname = pandoc-citeproc-bin
+	depends = pandoc-bin
+	provides = pandoc-citeproc
+	conflicts = pandoc-citeproc
+
+pkgname = pandoc-data
+	depends = pandoc-data
+
