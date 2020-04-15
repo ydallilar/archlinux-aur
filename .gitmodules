@@ -43,3 +43,6 @@
 [submodule "jade-application-kit"]
 	path = jade-application-kit
 	url = ssh://aur@aur.archlinux.org/jade-application-kit.git
+[submodule "cpl"]
+	path = cpl
+	url = ssh://aur@aur.archlinux.org/cpl.git
